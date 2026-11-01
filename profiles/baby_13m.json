@@ -1,0 +1,55 @@
+{
+  "name": "13개월 여아 수면방",
+  "note": "온도·습도는 국내 소아과 지침(사용자 제공), CO2는 침실 환기 연구 권고를 참고한 값이며 의학적 진단이 아닙니다.",
+  "targets": {
+    "co2": {
+      "good_max": 1000,
+      "ideal_max": 800,
+      "high_min": 1500,
+      "unit": "ppm",
+      "source": "Akimoto 외(2025, DTU 등) 침실 환기 연구: 잠자는 사람이 만드는 CO2는 최소 1,000 ppm 미만, 가능하면 800 ppm 미만"
+    },
+    "temp": {
+      "min": 20,
+      "max": 22,
+      "unit": "°C",
+      "source": "국내 소아과 지침: 실내 온도 20~22 °C (참고: Sleep Foundation 20~22 °C, Lullaby Trust 16~20 °C)"
+    },
+    "hum": {
+      "min": 50,
+      "max": 60,
+      "unit": "%",
+      "source": "국내 소아과 지침: 실내 습도 50~60 %"
+    }
+  },
+  "column_hints": {
+    "co2": [
+      "co2"
+    ],
+    "temp": [
+      "temp_co2",
+      "temp_env"
+    ],
+    "hum": [
+      "hum_co2",
+      "hum_env"
+    ]
+  },
+  "schedule": [
+    {
+      "name": "밤잠",
+      "start": "20:00",
+      "end": "07:00"
+    },
+    {
+      "name": "낮잠1",
+      "start": "10:00",
+      "end": "11:30"
+    },
+    {
+      "name": "낮잠2",
+      "start": "15:30",
+      "end": "17:00"
+    }
+  ]
+}
